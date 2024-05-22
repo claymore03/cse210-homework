@@ -1,3 +1,7 @@
+// Name: Clayton Redding
+// Instructor: Brother Gibbons
+// Class: CSE 210
+// Date: 05/22/2024
 using System;
 
 class Program
