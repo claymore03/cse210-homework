@@ -7,19 +7,19 @@ public class Job
     
     public void GetJobTitle()
     {
-        Console.WriteLine("Enter job title: ");
+        Console.Write("Enter job title: ");
         _jobTitle = Console.ReadLine();
     }
 
     public void GetCompanyName()
     {
-        Console.WriteLine("Enter the company's name: ");
+        Console.Write("Enter the company's name: ");
         _companyName = Console.ReadLine();
     }
 
     public void GetStartYear()
     {
-        Console.WriteLine("Enter start year: ");
+        Console.Write("Enter start year: ");
         _startYear = Convert.ToInt32(Console.ReadLine());
         Convert.ToString(_startYear);
         
@@ -27,9 +27,10 @@ public class Job
 
     public void GetEndYear()
     {
-        Console.WriteLine("Enter end year: ");
+        Console.Write("Enter end year: ");
         _endYear = Convert.ToInt32(Console.ReadLine());
         Convert.ToString(_endYear);
+        Console.WriteLine();
         
     }
     
