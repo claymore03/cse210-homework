@@ -10,12 +10,6 @@ public class Entry{
         
         }
 
-    public void DisplayDate()
-        {
-
-            Console.WriteLine($"{_date}");
-        }
-
     
     public void WriteNewEntry()
     {
@@ -24,7 +18,9 @@ public class Entry{
 
     public void DisplayEntry()
     {
-        Console.WriteLine($"{_entry}");
+        Console.WriteLine($"{_date}");
+        Console.WriteLine($"{_prompt}");
+        Console.WriteLine( $"{_entry}");
     }
 
 

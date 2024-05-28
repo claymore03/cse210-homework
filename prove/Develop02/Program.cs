@@ -4,8 +4,6 @@ class Program
 {
     static void Main(string[] args)
     {
-        
-        Entry entry = new Entry();
         Journal myJournal = new Journal();
         
         Console.WriteLine("Welcome to Journaltron 2000");
@@ -17,8 +15,10 @@ class Program
             if (selection == 1)
             {
                 //Write a new entry
-                entry.DisplayDate();
-                myJournal.DisplayRandomPrompt();
+                Entry entry = new Entry();
+                string prompt = myJournal.RandomPrompt();
+                Console.WriteLine(prompt);
+                entry._prompt = prompt;
                 entry.WriteNewEntry();
                 myJournal._entriesList.Add(entry);
             }

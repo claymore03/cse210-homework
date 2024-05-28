@@ -16,12 +16,12 @@ public class Journal
             _promptList.Add("Who did you interact with today?");
             
         }
-    public void DisplayRandomPrompt()
+    public string RandomPrompt()
            {
             Random rd = new Random();
                 int rand_num = rd.Next(0,4);
 
-            Console.WriteLine($"{_promptList[rand_num]}");
+            return $"{_promptList[rand_num]}";
         
            }
     
@@ -32,6 +32,6 @@ public class Journal
             entry.DisplayEntry();
         }
     }
-   
+
         
 }
