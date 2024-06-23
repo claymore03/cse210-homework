@@ -33,5 +33,19 @@ public class Journal
         }
     }
 
+    public void SaveToFile(_entriesList)
+    {
+        Console.Write("(Enter the file name): ");
+        _filePath = Console.ReadLine();
+
+        // using (StreamWriter outputFile = new StreamWriter (_filePath))
+        // {
+        //     foreach (Entry entry in _entriesList)
+        //     {
+        //         outputFile.WriteLine();
+        //     }
+        // }
+    }
+
         
 }

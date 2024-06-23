@@ -1,4 +1,7 @@
 using System;
+using System.Collections.Generic;
+using System.IO;
+
 
 class Program
 {
@@ -34,6 +37,7 @@ class Program
             else if (selection == 4)
             {
                 //Save journal
+                myJournal.SaveToFile();
             }
             else
             {
