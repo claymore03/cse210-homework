@@ -1,1 +1,2 @@
-System.Collections.Generic.List`1[Entry]
+Entry
+Entry

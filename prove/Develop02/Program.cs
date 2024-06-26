@@ -37,7 +37,7 @@ class Program
             else if (selection == 4)
             {
                 //Save journal
-                myJournal.SaveToFile();
+                myJournal.SaveToFile(myJournal._entriesList);
             }
             else
             {

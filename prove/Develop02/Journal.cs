@@ -1,10 +1,7 @@
 public class Journal
 {
+    //List of prompts
     public List<string> _promptList = new List<string>();
-
-    public List<Entry> _entriesList = new List<Entry>();
-
-    public string _filePath;
 
     public Journal()
         {
@@ -16,6 +13,14 @@ public class Journal
             _promptList.Add("Who did you interact with today?");
             
         }
+
+    //List of entries
+    public List<Entry> _entriesList = new List<Entry>();
+
+    //File name
+    public string _filePath;
+
+    //Generates random prompt from prompt list
     public string RandomPrompt()
            {
             Random rd = new Random();
@@ -24,7 +29,8 @@ public class Journal
             return $"{_promptList[rand_num]}";
         
            }
-    
+
+    //Displays entries within the entry list    
     public void DisplayEntries()
     {
         foreach (Entry entry in _entriesList)
@@ -33,18 +39,19 @@ public class Journal
         }
     }
 
-    public void SaveToFile(_entriesList)
+    //Saves entries from entry list to a txt file
+    public void SaveToFile(List<Entry> _entriesList)
     {
         Console.Write("(Enter the file name): ");
         _filePath = Console.ReadLine();
 
-        // using (StreamWriter outputFile = new StreamWriter (_filePath))
-        // {
-        //     foreach (Entry entry in _entriesList)
-        //     {
-        //         outputFile.WriteLine();
-        //     }
-        // }
+        using (StreamWriter outputFile = new StreamWriter (_filePath))
+        {
+            foreach (Entry entry in _entriesList)
+            {
+                outputFile.WriteLine(entry);
+            }
+        }
     }
 
         
