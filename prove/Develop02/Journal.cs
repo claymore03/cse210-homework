@@ -49,8 +49,28 @@ public class Journal
         {
             foreach (Entry entry in _entriesList)
             {
-                outputFile.WriteLine(entry);
+                outputFile.WriteLine($"{entry._date}~~{entry._prompt}~~{entry._entry}");
+                // outputFile.WriteLine(entry._prompt);
+                // outputFile.WriteLine(entry._entry);
             }
+        }
+    }
+
+    public void LoadFile()
+    {
+        Console.Write("(Enter the file name): ");
+        _filePath = Console.ReadLine();
+
+
+        string[] lines = System.IO.File.ReadAllLines(_filePath);
+
+        foreach (string line in lines)
+        {
+            Console.WriteLine(line);
+            //string[] parts = line.Split("~~");
+            //_date = parts[0];
+            //_prompt = parts[1];
+            //_entry = parts[2];
         }
     }
 

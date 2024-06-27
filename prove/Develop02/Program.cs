@@ -1,3 +1,7 @@
+//Name:Clayton Redding
+//Course: CSE 210
+//Instructor: Brother Gibbons
+//Date: 22 May 2024
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -8,7 +12,6 @@ class Program
     static void Main(string[] args)
     {
         Journal myJournal = new Journal();
-        
         Console.WriteLine("Welcome to Journaltron 2000");
         Console.WriteLine("1. Write.\n2. Display.\n3. Load.\n4. Save.\n5. Quit\n");
         Console.Write("Select an option: ");
@@ -18,12 +21,13 @@ class Program
             if (selection == 1)
             {
                 //Write a new entry
-                Entry entry = new Entry();
-                string prompt = myJournal.RandomPrompt();
+                string entry = "";
+                string prompt = "";
+                prompt = myJournal.RandomPrompt();
+                Entry entry1 = new Entry(prompt, entry);
                 Console.WriteLine(prompt);
-                entry._prompt = prompt;
-                entry.WriteNewEntry();
-                myJournal._entriesList.Add(entry);
+                entry1.WriteNewEntry();
+                myJournal._entriesList.Add(entry1);
             }
             else if (selection == 2)
             {
@@ -33,6 +37,7 @@ class Program
             else if (selection == 3)
             {
                 //Load journal
+                myJournal.LoadFile();
             }
             else if (selection == 4)
             {

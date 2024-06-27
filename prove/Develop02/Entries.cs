@@ -5,11 +5,12 @@ public class Entry{
     public string _prompt;
     public string _entry;
 
-     public Entry()
-        {
-        
-        }
+    public Entry(string prompt, string entry)
+    {
+        _prompt = prompt;
 
+        _entry = entry;
+    }
     
     public void WriteNewEntry()
     {
