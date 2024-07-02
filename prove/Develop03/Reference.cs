@@ -67,27 +67,31 @@ public class Reference
         _startVerse = verse1;
     }
 
-    public string ReferenceType4()
+    //For references such as Helaman 5:12
+    public string ReferenceType1()
     {
-        string text = $"{_bookNumber}{_book} {_chapter}:{_startVerse}-{_endVerse}";
+        string text = $"{_book} {_chapter}:{_startVerse}";
         return text;
     }
 
-    public string ReferenceType3()
-    {
-        string text = $"{_book} {_chapter}:{_startVerse}-{_endVerse}";
-        return text;
-    }
-
+    //For references such as 1Nephi 3:7
     public string ReferenceType2()
     {
         string text = $"{_bookNumber}{_book} {_chapter}:{_startVerse}";
         return text;
     }
 
-    public string ReferenceType1()
+    //For references such as Alma 5:21-30
+    public string ReferenceType3()
     {
-        string text = $"{_book} {_chapter}:{_startVerse}";
+        string text = $"{_book} {_chapter}:{_startVerse}-{_endVerse}";
+        return text;
+    }
+
+    //For references such as 3Nephi 18:1-3
+    public string ReferenceType4()
+    {
+        string text = $"{_bookNumber}{_book} {_chapter}:{_startVerse}-{_endVerse}";
         return text;
     }
 
